@@ -5,6 +5,8 @@
     </a>
   </div>
   <div class="container">
+    <a href="{{route('home')}}">Home</a>
+    <a href="{{route('comics.index')}}">Comics</a>
     <a class="btn btn-success" href="">Add a new comic</a>
   </div>
 </header>
