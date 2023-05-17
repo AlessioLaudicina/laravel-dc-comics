@@ -11,6 +11,8 @@
    <img src="{{ $comics->thumb }}" alt="{{ $comics->title}}">
   </div>
   <p>{!! $comics->description !!}</p>
+  <div class="d-flex justify-content-center">
   <a class="btn btn-primary" href="{{ route('comics.index') }}">Go back to list</a>
+  </div>
  </div>
 @endsection
