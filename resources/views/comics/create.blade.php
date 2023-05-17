@@ -6,23 +6,33 @@
 
 
     <form action="{{ route('comics.store') }}" method="POST">
+    @csrf 
       
       <div class="mb-3">
-        <label for="title" class="form-label">Title*</label>
+        <label for="title" class="form-label">Url dell' immagine di copertina</label>
+        <input type="text" class="form-control" name="thumb" id="thumb"
+           placeholder="Add image">
+      </div>
+
+      <div class="mb-3">
+        <label for="title" class="form-label">Titolo</label>
         <input type="text" class="form-control" name="title" id="title"
            placeholder="Add title">
       </div>
 
       <div class="mb-3">
-        <label for="title" class="form-label">Title*</label>
-        <input type="text" class="form-control" name="title" id="title"
-           placeholder="Add title">
+        <label for="title" class="form-label">Serie</label>
+        <input type="text" class="form-control"  name="series" id="series" placeholder="Add series">
       </div>
 
       <div class="mb-3">
-        <label for="title" class="form-label">Title*</label>
-        <input type="text" class="form-control" name="title" id="title"
-           placeholder="Add title">
+        <label for="title" class="form-label">Data di uscita</label>
+        <input type="text" class="form-control"  name="sale_date" id="sale_date" placeholder="Add series">
+      </div>
+
+      <div class="mb-3">
+        <label for="title" class="form-label">Prezzo</label>
+        <input type="text" class="form-control"  name="price" id="price" placeholder="Add price">
       </div>
 
 
