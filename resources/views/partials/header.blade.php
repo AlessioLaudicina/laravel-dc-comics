@@ -7,6 +7,6 @@
   <div class="container text-center m-4">
     <a href="{{route('home')}}" class="px-2">Home</a>
     <a href="{{route('comics.index')}}" class="px-2">Comics</a>
-    <a class="btn btn-primary px-2" href="{{ route('comics.create') }}">Add a new comic</a>
+    <a class=" px-2" href="{{ route('comics.create') }}">Add a new comic</a>
   </div>
 </header>

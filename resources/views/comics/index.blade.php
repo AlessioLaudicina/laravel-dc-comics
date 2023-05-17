@@ -11,7 +11,8 @@
 
   </div>
   <div class="d-flex justify-content-center my-4">
-  <a class="btn btn-primary" href="{{route('comics.show', ['comic'=> $comic->id])}}">Vedi</a>
+  <a class="btn btn-primary" href="{{route('comics.show', ['comic'=> $comic->id])}}">Info</a>
+  <a class="btn btn-primary mx-2" href="{{route('comics.edit', ['comic'=> $comic->id])}}">Modifica</a>
   </div>
 
 </div>
