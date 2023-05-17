@@ -37,7 +37,7 @@
 
 
       
-      <button type="submit" class="btn btn-primary mb-5">Add</button>
+      <button type="submit" class="btn btn-primary mb-5">Aggiungi</button>
 
     </form>
   </div>
