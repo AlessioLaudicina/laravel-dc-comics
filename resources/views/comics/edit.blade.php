@@ -2,12 +2,18 @@
 
 @section('content')
   <div class="container">
-    <h1>Add a new comic</h1>
+    <h1>Modifica info</h1>
 
 
     <form action="{{ route('comics.update', ['comic' => $comics->id])}}" method="POST">
     @csrf
     @method('PUT') 
+
+    <div class="mb-3">
+        <label for="title" class="form-label">Titolo</label>
+        <input type="text" class="form-control" name="title" id="title" value="{{$comics->title}}"
+           placeholder="Add title">
+      </div>
       
       <div class="mb-3">
         <label for="title" class="form-label">Url dell' immagine di copertina</label>
@@ -16,8 +22,8 @@
       </div>
 
       <div class="mb-3">
-        <label for="title" class="form-label">Titolo</label>
-        <input type="text" class="form-control" name="title" id="title" value="{{$comics->title}}"
+        <label for="description" class="form-label">Trama</label>
+        <input type="text" class="form-control" name="description" id="description" value="{{$comics->description}}"
            placeholder="Add title">
       </div>
 

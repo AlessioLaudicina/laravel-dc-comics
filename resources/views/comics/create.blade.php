@@ -3,6 +3,15 @@
 @section('content')
   <div class="container">
     <h1>Add a new comic</h1>
+    @if ($errors->any())
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
 
 
     <form action="{{ route('comics.store') }}" method="POST">
@@ -10,39 +19,63 @@
       
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
-        <input type="text" class="form-control" name="title" id="title"
-           placeholder="Add title">
+        <input type="text" class="form-control @error('title') is-invalid @enderror"  name="title" id="title" placeholder="Add title">
+        @error('title')
+        <div class="invalid-feedback">
+          {{$message}} 
+        </div>
+        @enderror
       </div>
       <div class="mb-3">
         <label for="thumb" class="form-label">Url dell' immagine di copertina</label>
-        <input type="text" class="form-control" name="thumb" id="thumb"
+        <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" id="thumb"
            placeholder="Add image">
+           @error('thumb')
+        <div class="invalid-feedback">
+          {{$message}} 
+        </div>
+        @enderror
       </div>
 
       <div class="mb-3">
-        <label for="description" class="form-label">Description</label>
-        <input type="text" class="form-control" name="description" id="description"
+        <label for="description" class="form-label">Trama</label>
+        <input type="text" class="form-control @error('description') is-invalid @enderror" name="description" id="description"
            placeholder="Add description">
+           @error('description')
+        <div class="invalid-feedback">
+          {{$message}} 
+        </div>
+        @enderror
       </div>
 
       <div class="mb-3">
         <label for="series" class="form-label">Serie</label>
-        <input type="text" class="form-control"  name="series" id="series" placeholder="Add series">
+        <input type="text" class="form-control @error('series') is-invalid @enderror"  name="series" id="series" placeholder="Add series">
+        @error('series')
+        <div class="invalid-feedback">
+          {{$message}} 
+        </div>
+        @enderror
       </div>
 
       <div class="mb-3">
         <label for="price" class="form-label">Prezzo</label>
-        <input type="text" class="form-control"  name="price" id="price" placeholder="Add price">
+        <input type="text" class="form-control @error('price') is-invalid @enderror"  name="price" id="price" placeholder="Add price">
+        @error('price')
+        <div class="invalid-feedback">
+          {{$message}} 
+        </div>
+        @enderror
       </div>
 
       <div class="mb-3">
         <label for="sale_date" class="form-label">Data di uscita</label>
-        <input type="text" class="form-control"  name="sale_date" id="sale_date" placeholder="Add series">
-      </div>
-
-      <div class="mb-3">
-        <label for="sale_date" class="form-label">Data di uscita</label>
-        <input type="text" class="form-control"  name="sale_date" id="sale_date" placeholder="Add series">
+        <input type="text" class="form-control @error('sale_date') is-invalid @enderror"  name="sale_date" id="sale_date" placeholder="Add series">
+        @error('sale_date')
+        <div class="invalid-feedback">
+          {{$message}} 
+        </div>
+        @enderror
       </div>
 
 

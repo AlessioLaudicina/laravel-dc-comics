@@ -39,7 +39,7 @@ class ComicsController extends Controller
         $request->validate([
             'title' => 'required|max:50',
             'thumb' => 'required|url|max:250',
-            'description' => 'nullable',
+            'description' => 'nullable|min:10',
             'series' => 'required|max:50',
             'price' => 'required|max:10',
             'sale_date' => 'nullable',
@@ -109,3 +109,5 @@ class ComicsController extends Controller
 
     }
 }
+
+
